@@ -1,5 +1,9 @@
 package ca.csf.pobj.tp2.utils;
 
+
+/**
+ Created by Benjamin Lemelin
+ */
 public class StringUtils {
 
     private StringUtils() {
