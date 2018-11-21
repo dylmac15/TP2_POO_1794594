@@ -9,15 +9,12 @@ public class NumberUtils {
         //Private so it's a static class
     }
 
-    public static int toInt(CharSequence value) {
-        return Integer.parseInt(value.toString());
+    public static String toString(int value) {
+        return String.valueOf(value);
     }
 
-    public static boolean isPositive(int number) {
-        if (number > -1) {
-            return true;
-        }
-        return false;
+    public static int toInt(CharSequence value) {
+        return Integer.parseInt(value.toString());
     }
 
 }

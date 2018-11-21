@@ -57,10 +57,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onConvertButtonClicked(View view) {
-        if (isInputBlank()) {
+        if (isInputBlank() ) {
             showEmptyInputMessage();
+        } else if(isInvalid()) {
+            showInvalidInputMessage();
         } else {
             convertInputToOutputNumber();
+        }
+    }
+
+    private boolean isInvalid() {
+        int inputValue = Integer.parseInt(inputEditText.getText().toString());
+
+        if(inputValue < RomanNumeralConverter.MIN_VALUE || inputValue > RomanNumeralConverter.MAX_VALUE) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
@@ -80,5 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void showEmptyInputMessage() {
         Snackbar.make(rootView, R.string.error_empty_input, Snackbar.LENGTH_SHORT).show();
+    }
+
+    private void showInvalidInputMessage() {
+        Snackbar.make(rootView, R.string.invalid_empty_input, Snackbar.LENGTH_SHORT).show();
     }
 }

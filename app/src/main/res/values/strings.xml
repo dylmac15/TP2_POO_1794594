@@ -4,4 +4,5 @@
     <string name="button_text">En chiffres romain</string>
     <string name="hint_output">Nombre convertis en Chiffres Romains</string>
     <string name="error_empty_input">S.V.P. entrez un nombre</string>
+    <string name="invalid_empty_input">Nombre invalid.</string>
 </resources>
