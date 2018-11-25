@@ -1,9 +1,12 @@
 package ca.csf.pobj.tp2.roman;
 
+//BEN_REVIEW : Algo simple, mais efficace.
+
 public class RomanNumeralConverter {
     static final int MIN_VALUE = 1;
     static final int MAX_VALUE = 4999;
 
+    //BEN_CORRECTION : Constantes devraient utiliser "UPPER_CASE", pas "camelCase".
     private final static String m[] = {"", "M", "MM", "MMM", "MMMM"};
 
     private final static String c[] = {"", "C", "CC", "CCC", "CD",

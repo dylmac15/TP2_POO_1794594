@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         romanNumeralConverter = new RomanNumeralConverter();
 
+        //BEN_CORRECTION : Je vois pas pourquoi tu n'a pas envoyé des entiers à la place.
+        //                 Ainsi, tu n'aurait pas eu à convertir les "strings" en entiers
+        //                 dès la construction de "InputFilterMinMax".
         inputEditText.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4999")});
     }
 
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isInvalid() {
         int inputValue = Integer.parseInt(inputEditText.getText().toString());
 
+        //BEN_REVIEW : Aurait pu être simplifié. Voir suggrestion de l'IDE.
         if(inputValue < RomanNumeralConverter.MIN_VALUE || inputValue > RomanNumeralConverter.MAX_VALUE) {
             return true;
         }

@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class RomanNumeralConverterTest {
     private RomanNumeralConverter romanNumeralConverter;
 
+    //BEN_CORRECTION : Fonction doit utiliser "camelCase", pas "PascalCase".
     @Before
     public void Before() {
         romanNumeralConverter = new RomanNumeralConverter();
